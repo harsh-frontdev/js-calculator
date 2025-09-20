@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <!-- Load Tailwind CSS from CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Add Inter font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #1a202c;
+      /* A slightly darker gray */
+    }
+  </style>
+</head>
+
+<body class="bg-gray-900 flex items-center justify-center min-h-screen">
+
+  <div class="bg-gray-800 p-6 rounded-3xl shadow-2xl w-96 max-w-sm">
+    <!-- Calculator Display -->
+    <div id="display"
+      class="bg-gray-900 text-white text-5xl font-light text-right p-4 mb-4 rounded-xl overflow-hidden h-24 flex items-end justify-end">
+      0</div>
+
+    <!-- Calculator Buttons Grid -->
+    <div class="grid grid-cols-4 gap-4">
+      <!-- Top row (clear, sign, percent) -->
+      <button
+        class="col-span-2 bg-gray-400 text-gray-900 w-full h-16 rounded-full text-2xl font-medium hover:bg-gray-300 transition duration-200 ease-in-out"
+        data-action="clear">AC</button>
+      <button
+        class="bg-gray-400 text-gray-900 w-full h-16 rounded-full text-2xl font-medium hover:bg-gray-300 transition duration-200 ease-in-out"
+        data-action="percent">%</button>
+      <button
+        class="bg-orange-500 text-white w-full h-16 rounded-full text-2xl font-medium hover:bg-orange-400 transition duration-200 ease-in-out"
+        data-action="divide">/</button>
+
+      <!-- Number and operator rows -->
+      <button
+        class="bg-gray-700 text-white w-full h-16 rounded-full text-2xl font-medium hover:bg-gray-600 transition duration-200 ease-in-out"
+        data-value="7">7</button>
+      <button
+        class="bg-gray-700 text-white w-full h-16 rounded-full text-2xl font-medium hover:bg-gray-600 transition duration-200 ease-in-out"
+        data-value="8">8</button>
+      <button
+        class="bg-gray-700 text-white w-full h-16 rounded-full text-2xl font-medium hover:bg-gray-600 transition duration-200 ease-in-out"
+        data-value="9">9</button>
+      <button
+        class="bg-orange-500 text-white w-full h-16 rounded-full text-2xl font-medium hover:bg-orange-400 transition duration-200 ease-in-out"
+        data-action="multiply">*</button>
+
+      <button
+        class="bg-gray-700 text-white w-full h-16 rounded-full text-2xl font-medium hover:bg-gray-600 transition duration-200 ease-in-out"
+        data-value="4">4</button>
+      <button
+        class="bg-gray-700 text-white w-full h-16 rounded-full text-2xl font-medium hover:bg-gray-600 transition duration-200 ease-in-out"
+        data-value="5">5</button>
+      <button
+        class="bg-gray-700 text-white w-full h-16 rounded-full text-2xl font-medium hover:bg-gray-600 transition duration-200 ease-in-out"
+        data-value="6">6</button>
+      <button
+        class="bg-orange-500 text-white w-full h-16 rounded-full text-2xl font-medium hover:bg-orange-400 transition duration-200 ease-in-out"
+        data-action="subtract">-</button>
+
+      <button
+        class="bg-gray-700 text-white w-full h-16 rounded-full text-2xl font-medium hover:bg-gray-600 transition duration-200 ease-in-out"
+        data-value="1">1</button>
+      <button
+        class="bg-gray-700 text-white w-full h-16 rounded-full text-2xl font-medium hover:bg-gray-600 transition duration-200 ease-in-out"
+        data-value="2">2</button>
+      <button
+        class="bg-gray-700 text-white w-full h-16 rounded-full text-2xl font-medium hover:bg-gray-600 transition duration-200 ease-in-out"
+        data-value="3">3</button>
+      <button
+        class="bg-orange-500 text-white w-full h-16 rounded-full text-2xl font-medium hover:bg-orange-400 transition duration-200 ease-in-out"
+        data-action="add">+</button>
+
+      <!-- Bottom row -->
+      <button
+        class="col-span-2 bg-gray-700 text-white w-full h-16 rounded-full text-2xl font-medium text-left pl-8 hover:bg-gray-600 transition duration-200 ease-in-out"
+        data-value="0">0</button>
+      <button
+        class="bg-gray-700 text-white w-full h-16 rounded-full text-2xl font-medium hover:bg-gray-600 transition duration-200 ease-in-out"
+        data-value=".">.</button>
+      <button
+        class="bg-orange-600 text-white w-full h-16 rounded-full text-2xl font-medium hover:bg-orange-500 transition duration-200 ease-in-out"
+        data-action="calculate">=</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
